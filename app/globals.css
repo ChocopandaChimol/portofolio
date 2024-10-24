@@ -2,26 +2,189 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+.flag-icon {
+  transition: transform 0.3s ease; 
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+.flag-icon:hover {
+  transform: scale(1.2); 
+}
+
+.flag-icon:hover .indonesian-flag {
+  animation: flutter 0.5s infinite alternate; 
+}
+
+@keyframes flutter {
+  0% {
+    transform: rotate(0deg) translateY(0); 
+  }
+  25% {
+    transform: rotate(-3deg) translateY(-2px); 
+  }
+  50% {
+    transform: rotate(3deg) translateY(2px); 
+  }
+  75% {
+    transform: rotate(-2deg) translateY(-1px); 
+  }
+  100% {
+    transform: rotate(2deg) translateY(1px); 
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+
+.welcome-text {
+  font-family: 'Arial', sans-serif; 
+  font-size: 5rem; 
+  transition: transform 0.3s ease, color 0.3s ease; 
+  margin-top : -20px;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+.welcome-text:hover {
+  transform: scale(1.05); 
+  color: #00b894; 
+}
+
+.hover-effect {
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.hover-effect:hover {
+  background-color: rgba(0, 255, 255, 0.2); 
+  transform: scale(1.05); 
+}
+
+.projects-text {
+  font-family: 'Arial', sans-serif; 
+  font-size: 5rem; 
+  transition: transform 0.3s ease, color 0.3s ease; 
+  margin-top: 90px;
+}
+
+.projects-text:hover {
+  transform: scale(1.05); 
+  color: #00b894; 
+}
+
+
+.line-container {
+  position: relative;
+  width: 80%; /* Set the line width */
+  height: 4px; /* Height of the line */
+  margin: 0 auto; /* Center line in the page */
+}
+
+.line {
+  position: relative;
+  width: 100%; /* Fill the container width */
+  height: 4px; /* Height of the line */
+  background-color: #e2e8f0; /* Line color */
+}
+
+.circle {
+  position: absolute;
+  top: -10px; /* Position above the line */
+  left: 0; /* Start from the left */
+  width: 24px; /* Circle size */
+  height: 24px; /* Circle size */
+  border-radius: 50%; /* Make it a circle */
+  background-color: #4fd1c5; /* Initial color */
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Animation on hover */
+.line-container:hover .circle {
+  animation: bounce-color 4s linear infinite; /* Slower bouncing and color-changing animation */
+}
+
+@keyframes bounce-color {
+  0% {
+    left: 0; /* Start from the left */
+    background-color: #4fd1c5; /* Initial color */
+    opacity: 1; /* Fully visible */
   }
+  25% {
+    left: calc(100% - 24px); /* Move to the right, accounting for circle width */
+    background-color: #ff5733; /* Change to red color */
+    opacity: 0.7; /* Slightly less visible */
+  }
+  50% {
+    left: 0; /* Move back to the left */
+    background-color: #4fd1c5; /* Change back to initial color */
+    opacity: 1; /* Fully visible */
+  }
+  75% {
+    left: calc(100% - 24px); /* Move to the right */
+    background-color: #ffcc00; /* Change to yellow color */
+    opacity: 0.7; /* Slightly less visible */
+  }
+  100% {
+    left: 0; /* Move back to the left */
+    background-color: #4fd1c5; /* Change back to initial color */
+    opacity: 1; /* Fully visible */
+  }
+}
+
+.skills-projects-text {
+  font-family: 'Arial', sans-serif; 
+  font-size: 5rem; 
+  transition: transform 0.3s ease, color 0.3s ease; 
+  margin-top: 90px;
+}
+
+.skills-text:hover {
+  transform: scale(1.05); 
+  color: #00b894; 
+}
+
+.experience-text {
+  font-family: 'Arial', sans-serif; 
+  font-size: 5rem; 
+  transition: transform 0.3s ease, color 0.3s ease; 
+  margin-top : -20px;
+
+}
+
+.experience-text:hover {
+  transform: scale(1.05); 
+  color: #00b894; 
+}
+
+.articles-text {
+  font-family: 'Arial', sans-serif; 
+  font-size: 5rem; 
+  transition: transform 0.3s ease, color 0.3s ease; 
+  margin-top : -20px;
+}
+
+.articles-text:hover {
+  transform: scale(1.05); 
+  color: #00b894; 
+}
+
+/* Mobile Specific Adjustments */
+@media (max-width: 768px) { /* Adjust as needed for your breakpoints */
+    .experience-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center items in mobile view */
+        text-align: center; /* Center text for mobile */
+    }
+
+    .flex-col.items-center {
+        align-items: center; /* Ensure that items are centered */
+    }
+
+    /* Additional mobile styles if necessary */
+    .line-container {
+        margin-bottom: 1rem; /* Ensure some spacing below the line for mobile */
+    }
+
+    .line {
+        width: 90%; /* Adjust line width for mobile */
+    }
+
+    .circle {
+        left: calc(50% - 1rem); /* Center the circle */
+    }
 }
