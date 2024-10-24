@@ -4,7 +4,7 @@ import Skills from './components/Skills';
 import Experience from './components/Experience';
 import Articles from './components/Articles';
 import Contact from './components/Contact';
-import Footer from './components/footer';
+import Footer from './components/Footer';
 
 export default function Home() {
   return (
