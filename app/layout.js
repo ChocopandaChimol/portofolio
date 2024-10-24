@@ -30,8 +30,8 @@ export default function RootLayout({ children }) {
         <div className="min-h-screen flex justify-center items-center">
           {/* Background gradient */}
           <div className="z-[-10] fixed inset-0 bg-gradient-to-br from-[#005f50] to-[#002d2b]"></div>
-          {/* Centered content */}
-          <div className="w-full max-w-screen-md mx-auto px-4">
+          {/* Fixed width and centered content */}
+          <div className="w-full max-w-[400px] sm:max-w-[600px] lg:max-w-[800px] mx-auto px-4">
             {children}
           </div>
         </div>
