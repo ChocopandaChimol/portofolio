@@ -16,11 +16,12 @@ const Articles = async () => {
                 </div>
             </div>
 
-            <h2 className="articles-text my-12 text-center text-2xl font-semibold tracking-wide text-slate-100">
-                Artikel Saya
+            <h2 className="projects-text text-center tracking-tighter lg:text-[6rem] text-4xl font-semibold text-white mt-6 mb-4">
+                Artikel
             </h2>
 
-            <div className="mx-2 flex flex-col items-center justify-center">
+            {/* Add mt-20 here for spacing */}
+            <div className="mx-2 flex flex-col items-center justify-center mt-20">
                 {posts.map((post, index) => (
                     <Link href={`/posts/${post.slug}`} key={index}>
                         <div className="mb-12 flex flex-col md:flex-row max-w-2xl items-center justify-between border border-slate-300 p-4 rounded-lg transition duration-300 hover:shadow-lg">

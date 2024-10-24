@@ -12,7 +12,7 @@ const Projects = () => {
         <div className="circle"></div>
       </div>
 
-      <h2 className="projects-text text-center tracking-tighter lg:text-[6rem] text-4xl font-normal text-white mt-6">
+      <h2 className="projects-text text-center tracking-tighter lg:text-[6rem] text-4xl font-semibold text-white mt-6">
         Projek
       </h2>
 

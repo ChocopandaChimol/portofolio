@@ -72,10 +72,12 @@ const Contact = () => {
                 </div>
             </div>
 
-            <h2 className="articles-text my-12 text-center text-2xl font-semibold tracking-wide text-slate-100">
+            <h2 className="projects-text text-center tracking-tighter lg:text-[6rem] text-4xl font-semibold text-white mt-6 mb-4">
                 Kontak
             </h2>
-            <form onSubmit={handleSubmit} className="mx-auto max-w-xl p-4 space-y-4">
+
+            {/* Add mt-20 here for spacing */}
+            <form onSubmit={handleSubmit} className="mx-auto max-w-xl p-4 space-y-4 mt-20">
                 <div>
                     <input 
                         type='text' 

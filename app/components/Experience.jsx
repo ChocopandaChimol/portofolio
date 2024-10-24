@@ -17,8 +17,10 @@ const Experience = () => {
 
             {/* Konten pengalaman */}
             <div className="pb-4">
-                <h1 className="experience-text my-20 font-semibold text-center text-4xl">Pengalaman</h1>
-                <div>
+                <h2 className="projects-text text-center tracking-tighter lg:text-[6rem] text-4xl font-semibold text-white mt-6 mb-4">
+                    Pengalaman
+                </h2>
+                <div className="mt-20"> {/* Add margin here */}
                     {EXPERIENCE && EXPERIENCE.length > 0 ? (
                         EXPERIENCE.map((experience, index) => (
                             <div

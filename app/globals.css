@@ -32,12 +32,12 @@
   }
 }
 
-
 .welcome-text {
   font-family: 'Arial', sans-serif; 
   font-size: 5rem; 
   transition: transform 0.3s ease, color 0.3s ease; 
-  margin-top : -20px;
+  margin-top: -20px;
+  margin-bottom: 20px; /* Added margin for spacing */
 }
 
 .welcome-text:hover {
@@ -59,13 +59,13 @@
   font-size: 5rem; 
   transition: transform 0.3s ease, color 0.3s ease; 
   margin-top: 90px;
+  margin-bottom: 20px; /* Added margin for spacing */
 }
 
 .projects-text:hover {
   transform: scale(1.05); 
   color: #00b894; 
 }
-
 
 .line-container {
   position: relative;
@@ -125,66 +125,30 @@
   }
 }
 
-.skills-projects-text {
-  font-family: 'Arial', sans-serif; 
-  font-size: 5rem; 
-  transition: transform 0.3s ease, color 0.3s ease; 
-  margin-top: 90px;
-}
-
-.skills-text:hover {
-  transform: scale(1.05); 
-  color: #00b894; 
-}
-
-.experience-text {
-  font-family: 'Arial', sans-serif; 
-  font-size: 5rem; 
-  transition: transform 0.3s ease, color 0.3s ease; 
-  margin-top : -20px;
-
-}
-
-.experience-text:hover {
-  transform: scale(1.05); 
-  color: #00b894; 
-}
-
-.articles-text {
-  font-family: 'Arial', sans-serif; 
-  font-size: 5rem; 
-  transition: transform 0.3s ease, color 0.3s ease; 
-  margin-top : -20px;
-}
-
-.articles-text:hover {
-  transform: scale(1.05); 
-  color: #00b894; 
-}
 
 /* Mobile Specific Adjustments */
 @media (max-width: 768px) { /* Adjust as needed for your breakpoints */
-    .experience-content {
-        display: flex;
-        flex-direction: column;
-        align-items: center; /* Center items in mobile view */
-        text-align: center; /* Center text for mobile */
-    }
+  .experience-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items in mobile view */
+    text-align: center; /* Center text for mobile */
+  }
 
-    .flex-col.items-center {
-        align-items: center; /* Ensure that items are centered */
-    }
+  .flex-col.items-center {
+    align-items: center; /* Ensure that items are centered */
+  }
 
-    /* Additional mobile styles if necessary */
-    .line-container {
-        margin-bottom: 1rem; /* Ensure some spacing below the line for mobile */
-    }
+  /* Additional mobile styles if necessary */
+  .line-container {
+    margin-bottom: 1rem; /* Ensure some spacing below the line for mobile */
+  }
 
-    .line {
-        width: 90%; /* Adjust line width for mobile */
-    }
+  .line {
+    width: 90%; /* Adjust line width for mobile */
+  }
 
-    .circle {
-        left: calc(50% - 1rem); /* Center the circle */
-    }
+  .circle {
+    left: calc(50% - 1rem); /* Center the circle */
+  }
 }

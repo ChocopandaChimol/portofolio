@@ -10,9 +10,10 @@ import { FaBootstrap } from "react-icons/fa"; // Bootstrap icon
 const Skills = () => {
     return (
         <div className="pb-24">
-            <h1 className="skills-text text-center tracking-tighter lg:text-[6rem] text-4xl font-semibold text-white mt-6">
+          <h1 className="projects-text text-center tracking-tighter lg:text-[6rem] text-4xl font-semibold text-white mt-6">
                 Skills
             </h1>
+
             
             {/* Add more margin to increase the spacing between the heading and the icons */}
             <div className="flex flex-wrap items-center justify-center gap-12 mt-16">
