@@ -21,15 +21,19 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head>{}</head>
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} leading-relaxed text-slate-200 antialiased selection:bg-teal-300 selection:text-teal-900`}
       >
-        <div className="min-h-screen container mx-auto relative">
-          {}
-          <div className="z-[-10] fixed inset-0 bg-gradient-to-br from-[#005f50] to-[#002d2b]"></div>{' '}
-          {/* Darker gradient */}
-          {children}
+        <div className="min-h-screen flex justify-center items-center">
+          {/* Background gradient */}
+          <div className="z-[-10] fixed inset-0 bg-gradient-to-br from-[#005f50] to-[#002d2b]"></div>
+          {/* Centered content */}
+          <div className="w-full max-w-screen-md mx-auto px-4">
+            {children}
+          </div>
         </div>
       </body>
     </html>
